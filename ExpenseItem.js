@@ -8,8 +8,17 @@ import './ExpenseItem.css';
 
 
 const  ExpenseItem = (props) => {
-    
+   
+    const clickHandler1 = () => {
+        console.log('Clicked!!!!');
 
+        
+    }
+    const clickHandler2 = () => {
+        console.log('deleted');
+        
+        
+    }
     return(
     <Card className='expense-item'>
        <ExpenseDate date={props.date}></ExpenseDate>
@@ -30,6 +39,8 @@ const  ExpenseItem = (props) => {
            
             
         </div>
+        <button onClick={clickHandler1}>Change Title</button>
+        <button onClick={clickHandler2}>delete</button>
     </Card>
     );
 }
